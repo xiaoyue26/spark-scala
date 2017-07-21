@@ -59,7 +59,11 @@ dependencies {
     compile 'org.apache.spark:spark-streaming_2.10:1.5.0'
     compile 'org.apache.commons:commons-csv:1.1'
     runtime 'mysql:mysql-connector-java:5.1.6'
+    /*compile 'org.scalikejdbc:scalikejdbc:2.5.2'
+    compile 'com.h2database:h2:1.4.196'
+    compile 'ch.qos.logback:logback-classic:1.2.3'*/
 }
+
 tasks.create(name: "copyDependantLibs", type: Copy) {
     from (configurations.testRuntime)
     into "$buildDir/dependant-libs"
