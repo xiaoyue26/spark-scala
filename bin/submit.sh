@@ -30,8 +30,18 @@ cd fengmq
 wget http://upload.zhenguanyu.com/uploads/fengfat.jar
 spark-submit --master yarn-cluster --queue default \
 --class hbase.job.ApeQuestionStatJob --name ApeQuestionStatJob --num-executors 30 --executor-memory 4g \
-fatjar.jar
+fengfat.jar
 !
 
+# 5. ApeUserQuestionStatJob
+:<<!
+set -ex
+ssh dx-pipe-cpu1-pm
+cd fengmq
+wget http://upload.zhenguanyu.com/uploads/fengfat.jar
+spark-submit --master yarn-cluster --queue default \
+--class hbase.job.ApeUserQuestionStatJob --name ApeUserQuestionStatJob --num-executors 1000 --executor-memory 4g \
+fengfat.jar
+!
 
 
