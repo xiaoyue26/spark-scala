@@ -1,10 +1,11 @@
+package learn
+
 /**
   * Created by xiaoyue26 on 17/12/13.
   */
 
 import org.apache.spark._
-import org.apache.spark.streaming._
-import org.apache.spark.streaming.StreamingContext._ // not necessary since Spark 1.3
+import org.apache.spark.streaming._ // not necessary since Spark 1.3
 object NetWordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("NetworkWordCount")

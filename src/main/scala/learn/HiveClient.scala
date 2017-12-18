@@ -1,6 +1,7 @@
-import java.sql.{Connection, DriverManager, ResultSet, ResultSetMetaData, Statement}
+package learn
+
+import java.sql.DriverManager
 import java.util
-import java.util.{ArrayList, List}
 
 /**
   * Created by xiaoyue26 on 17/9/2.

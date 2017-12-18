@@ -1,3 +1,5 @@
+package learn
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -17,9 +19,9 @@
 
 // scalastyle:off println
 
-import scala.math.random
-
 import org.apache.spark._
+
+import scala.math.random
 
 /** Computes an approximation to pi */
 object SparkPi {

@@ -1,8 +1,10 @@
+package learn
+
 /**
   * Created by xiaoyue26 on 17/8/18.
   */
 
-import org.apache.hadoop.fs.{ContentSummary, FileStatus, FileSystem, Path}
+import org.apache.hadoop.fs.{ContentSummary, FileSystem, Path}
 import org.apache.spark._
 import org.apache.spark.sql.{Row, SQLContext}
 
@@ -36,9 +38,6 @@ object TrafficPercent {
     val sc = new SparkContext(conf)
     //val hiveCtx = HiveContext(sc)
     val sqlContext = new SQLContext(sc)
-
-
-    import org.apache.spark.sql.{Row, SQLContext}
     val lines = sqlContext.sql(" SELECT * FROM tutor.ods_tutor_live_traffic_scheduler WHERE dt='2017-08-16'")
     //lines.printSchema()
     val linerdd = lines.rdd
@@ -110,7 +109,6 @@ object TrafficPercent {
     val conf = new SparkConf().setAppName("TrafficPercent")
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
-    import org.apache.spark.sql.{Row, SQLContext}
     val lines = sqlContext.sql(" SELECT * FROM tutor.ods_tutor_live_traffic_scheduler WHERE dt='2017-08-16'")
     //lines.printSchema()
     val linerdd = lines.rdd

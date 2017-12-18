@@ -1,6 +1,6 @@
-import java.sql.{Connection, DriverManager, ResultSet, ResultSetMetaData}
+package learn
 
-import LocalMysqlClient.query
+import java.sql.{Connection, DriverManager, ResultSet, ResultSetMetaData}
 
 /**
   * Created by xiaoyue26 on 17/7/21.
