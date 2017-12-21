@@ -45,3 +45,6 @@ fengfat.jar
 !
 
 
+spark-submit --master yarn-cluster --queue default \
+--class learn.SparkPi --name test --num-executors 1 --executor-memory 4g \
+fengfat.jar
